@@ -21,7 +21,7 @@ public class PizzaServiceImpl implements PizzaService {
     public List<PizzaDto> obterTodas() {
         return repositorio.findAll()
             .stream()
-            .map(p -> new PizzaDto(p.getSabor(), p.getIngredientes()))
+            .map(p -> new PizzaDto(p.getId(), p.getSabor(), p.getIngredientes()))
             .toList();
     }
 
